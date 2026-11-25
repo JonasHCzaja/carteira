@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:17'
+    environment:
+      - 'POSTGRES_USER=carteira'
+      - 'POSTGRES_PASSWORD=carteira'
+      - 'POSTGRES_DB=carteira'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'carteira-dados:/var/lib/postgresql/data'
+
+volumes:
+  carteira-dados:
